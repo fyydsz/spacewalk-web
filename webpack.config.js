@@ -29,6 +29,10 @@ module.exports = {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       },
+      {
+        test: /\.(png|jpe?g|gif|ico)$/i,
+        type: "asset/resource", // Gantikan "file-loader" di Webpack 5
+      },
     ],
   },
   resolve: {
