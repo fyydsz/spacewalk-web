@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./Home.css";
+import About from "./About";
 
 const Home: React.FC = () => {
   const fullText = "Space Walk";
@@ -29,14 +30,14 @@ const Home: React.FC = () => {
   }, []);
 
   return (
-    <section className="home">
+    <section id="home" className="home">
       <div className="headers">
         <h1>
           {text}
           <span className={`cursor-placeholder ${showCursor ? 'cursor-visible' : ''}`}></span>
         </h1>
         <p>Explore the cosmos.</p>
-        <button type="button" className="discord-button">Join us</button>
+        <button type="button" className="discord-button" onClick={() => window.location.href = "https://discord.gg/DpNdCKqJtH"}>Join us</button>
       </div>
     </section>
   );
