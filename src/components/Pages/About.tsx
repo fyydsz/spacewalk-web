@@ -3,7 +3,6 @@ import "./About.css";
 const About: React.FC = () => {
   return (
     <section id="about" className="about-section">
-      <div className="stars"></div> {/* Efek bintang */}
       <div className="container">
         <h2 className="about-title">About Space Walk</h2>
         <p className="about-description">
