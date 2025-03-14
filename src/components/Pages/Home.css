@@ -31,10 +31,15 @@
 }
 
 .headers {
+  display: inline-flex;
+  max-width: max-content;
+  margin-left: auto;
   position: absolute;
   color: white;
   text-align: center;
   top: 35vh;
+  flex-direction: column;
+  align-items: center;
 }
 
 .headers h1 {
@@ -48,17 +53,24 @@
 
 .discord-button {
   margin-top: 1.15em;
-  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
-  border: 1px solid rgba(255, 255, 255, 0.3); /* Light border */
-  backdrop-filter: blur(10px); /* Glass blur effect */
-  -webkit-backdrop-filter: blur(10px); /* For Safari */
-  color: white; /* Text color */
+  background: rgba(255, 255, 255, 0.2);
+  /* Semi-transparent white */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  /* Light border */
+  backdrop-filter: blur(10px);
+  /* Glass blur effect */
+  -webkit-backdrop-filter: blur(10px);
+  /* For Safari */
+  color: white;
+  /* Text color */
   font-size: 16px;
   padding: 10px 20px;
-  border-radius: 10px; /* Rounded corners */
+  border-radius: 10px;
+  /* Rounded corners */
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2); /* Soft glow */
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+  /* Soft glow */
 }
 
 /* Hover Effect */
