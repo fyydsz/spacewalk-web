@@ -7,9 +7,9 @@ const About: React.FC = () => {
         <h2 className="about-title">About Space Walk</h2>
         <p className="about-description">
           Space Walk adalah platform eksplorasi virtual yang membawa Anda ke luar angkasa. 
-          Jelajahi dunia baru, temukan keajaiban kosmos, dan gabung dengan komunitas antariksa!
+          Jelajahi dunia luar angkasa dengan pengalaman terbaik di Spacewalk Discord Server.
         </p>
-        <button className="about-btn">Learn More</button>
+        <button className="about-btn" onClick={() => window.location.href = "https://discord.gg/DpNdCKqJtH"}>Join us</button>
       </div>
     </section>
   );
