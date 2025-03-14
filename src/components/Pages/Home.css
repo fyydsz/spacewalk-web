@@ -51,7 +51,7 @@
   font-size: 1.2rem;
 }
 
-.discord-button {
+.button {
   margin-top: 1.15em;
   background: rgba(255, 255, 255, 0.2);
   /* Semi-transparent white */
@@ -74,14 +74,14 @@
 }
 
 /* Hover Effect */
-.discord-button:hover {
+.button:hover {
   background: rgba(255, 255, 255, 0.3);
   box-shadow: 0 6px 15px rgba(255, 255, 255, 0.3);
   transform: scale(1.05);
 }
 
 /* Click Effect */
-.discord-button:active {
+.button:active {
   background: rgba(255, 255, 255, 0.4);
   transform: scale(0.98);
 }

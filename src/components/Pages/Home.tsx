@@ -29,6 +29,13 @@ const Home: React.FC = () => {
     };
   }, []);
 
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section id="home" className="home">
       <div className="headers">
@@ -37,7 +44,7 @@ const Home: React.FC = () => {
           <span className={`cursor-placeholder ${showCursor ? 'cursor-visible' : ''}`}></span>
         </h1>
         <p>Explore the cosmos.</p>
-        <button type="button" className="discord-button" onClick={() => window.location.href = "https://discord.gg/DpNdCKqJtH"}>Join us</button>
+        <button type="button" className="button" onClick={() => scrollToSection("about")}>Learn More</button>
       </div>
     </section>
   );
