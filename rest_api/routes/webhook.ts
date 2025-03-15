@@ -1,8 +1,8 @@
 import { Router } from "express";
-import helloHandler from "../v1/hello";
+import takoWebhook from "../webhook/tako";
 
 const router = Router();
 
-router.post("/tako", helloHandler);
+router.post("/tako", takoWebhook);
 
 export default router;
