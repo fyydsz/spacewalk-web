@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('./../../../public/assets/img/bg.png');
+  background-image: url('./../../../public/assets/img/bg.webp');
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
