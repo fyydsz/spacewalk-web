@@ -1,5 +1,6 @@
 import express from "express";
-import apiRoutes from "./routes/apiRoutes";
+import apiRoutes from "./routes/v1Routes";
+import webhookRoutes from "./routes/webhook"
 import cors from "cors"
 import { configDotenv } from "dotenv";
 configDotenv();
@@ -13,6 +14,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/v1", apiRoutes);
+app.use("/webhook", webhookRoutes);
 app.get("/", (req, res) => {
   // Send an Easter Egg!
   res.send("Shh... You weren't supposed to find this.")
