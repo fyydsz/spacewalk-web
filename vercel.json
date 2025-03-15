@@ -1,34 +1,5 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "api/index.ts",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "dist/**",
-      "use": "@vercel/static"
-    }
-  ],
   "rewrites": [
-    {
-      "source": "/api/:path*",
-      "destination": "/api/index.ts"
-    },
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "query",
-          "key": "apiPath",
-          "value": "(?<apiPath>.*)"
-        }
-      ],
-      "destination": "/api/index.ts?apiPath=:apiPath"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/dist/index.html"
-    }
+    { "source": "/(.*)", "destination": "/" }
   ]
 }
