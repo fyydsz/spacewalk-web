@@ -10,14 +10,25 @@
       "use": "@vercel/static"
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/api/(.*)",
-      "dest": "/api/index.ts"
+      "source": "/api/:path*",
+      "destination": "/api/index.ts"
     },
     {
-      "src": "/(.*)",
-      "dest": "/dist/index.html"
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "query",
+          "key": "apiPath",
+          "value": "(?<apiPath>.*)"
+        }
+      ],
+      "destination": "/api/index.ts?apiPath=:apiPath"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/dist/index.html"
     }
   ]
 }
