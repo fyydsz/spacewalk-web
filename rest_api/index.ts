@@ -7,6 +7,7 @@ configDotenv();
 const port = process.env.PORT;
 
 const app = express();
+app.disable('etag')
 
 app.use(cors());
 app.use(express.json());
