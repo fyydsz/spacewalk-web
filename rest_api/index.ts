@@ -13,4 +13,6 @@ app.use(express.json());
 
 app.use("/api/v1", apiRoutes);
 
-export default app;
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
+});
