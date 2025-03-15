@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('./../../../public/assets/img/bg.png');
+  background-image: url('./../../../public/assets/img/bg.webp');
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -94,6 +94,13 @@
   vertical-align: text-bottom;
   /* The placeholder is always there, but transparent when not visible */
   background-color: transparent;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
 
 .cursor-visible {
