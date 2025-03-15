@@ -8,6 +8,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
+    publicPath: '/' // Tambahkan ini
   },
   module: {
     rules: [
@@ -48,8 +49,15 @@ module.exports = {
   devServer: {
     static: path.resolve(__dirname, 'dist'),
     compress: true,
-    port: 3000,
+    port: 3001,
     hot: true,
-    historyApiFallback: true  // Add this line
+    historyApiFallback: true,
+    proxy: [
+      {
+        context: ["/api"], // Semua request ke /api akan diarahkan ke backend
+        target: "http://localhost:3991",
+        changeOrigin: true,
+      },
+    ],
   },
 };
