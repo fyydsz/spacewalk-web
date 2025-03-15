@@ -15,7 +15,11 @@ app.use("/v1", apiRoutes);
 app.use("/", (req, res) => {
   // Send an Easter Egg!
   res.send("Shh... You weren't supposed to find this.")
-})
+});
+
+app.use((req, res) => {
+  res.status(404).json({ code: 404, message: "Path not found." });
+});
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
