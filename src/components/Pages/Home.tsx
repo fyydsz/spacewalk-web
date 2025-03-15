@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import "./Home.css";
-import About from "./About";
 
 const Home: React.FC = () => {
   const fullText = "Space Walk";
@@ -9,25 +8,20 @@ const Home: React.FC = () => {
 
   useEffect(() => {
     let index = 0;
-    const typingInterval = setInterval(() => {
+
+    const type = () => {
       if (index < fullText.length) {
         setText(fullText.substring(0, index + 1));
         index++;
-      } else {
-        clearInterval(typingInterval);
+        setTimeout(type, 200); // Delay tiap huruf
       }
-    }, 150); // Adjust typing speed
-
-    // Cursor blinking effect
-    const cursorInterval = setInterval(() => {
-      setShowCursor((prev) => !prev);
-    }, 500);
-
-    return () => {
-      clearInterval(typingInterval);
-      clearInterval(cursorInterval);
     };
+
+    type();
+
+    return () => { }; // Cleanup tidak perlu karena tidak ada interval
   }, []);
+
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
