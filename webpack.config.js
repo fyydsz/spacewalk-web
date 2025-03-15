@@ -1,6 +1,10 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { configDotenv } = require("dotenv");
+configDotenv();
+
+const port = process.env.PORT;
 
 module.exports = {
   mode: 'development',
@@ -55,7 +59,7 @@ module.exports = {
     proxy: [
       {
         context: ["/api"], // Semua request ke /api akan diarahkan ke backend
-        target: "http://localhost:3991",
+        target: `http://localhost:${port}`,
         changeOrigin: true,
       },
     ],
